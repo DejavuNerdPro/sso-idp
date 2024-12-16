@@ -1,0 +1,15 @@
+Single Sign On Techniques involved two types:
+(1) Identify Provider
+(2) Service Provider
+
+Idendify Provider :
+ key responsibility
+ (1) Authentication User
+ (2) Issue Token eg., JWT
+ (3) Provide Token Validation
+
+
+Service Provider :
+ key responsibility
+ (1)to facilitate user's access without requiring them to re-authenticate.
+ 
