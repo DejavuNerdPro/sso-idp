@@ -2,9 +2,9 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-// import authRoutes from "./routes/auth";
-// import validateRoutes from "./routes/validate";
-// import { errorHandler } from "./middleware/errorHandler";
+import authRoutes from "./routes/auth";
+import validateRoutes from "./routes/validate";
+import { errorHandler } from "./middlewares/errorhandler";
 
 dotenv.config();
 
@@ -14,11 +14,11 @@ app.use(bodyParser.json());
 
 
 // Routes
-// app.use("/auth", authRoutes);
-// app.use("/validate", validateRoutes);
+app.use("/auth", authRoutes);
+app.use("/validate", validateRoutes);
 
-// Error handling middleware
-// app.use(errorHandler);
+//Error handling middleware
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
